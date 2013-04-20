@@ -14,7 +14,8 @@ Functions of this script:
 - Web server with PHP compability.
 
 ##Setup instruction
-- Copy "count-code" folder into your projects root folder
-- 
+- Copy "count-code" folder into your projects root folder.
+- Check http://YOUR_URL/count-code/lines-of-code, if you can se the result, than job is done.
+- You can add DIY panel on your Status Board.
 
 
