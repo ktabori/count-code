@@ -1,9 +1,10 @@
-Count Code for Panic's Status Board
+Count Code for Panic's Status Board 1.1 (UPDATED)
 ===================================
 
 ##About this script
 
 Functions of this script:
+- Counts the files in root folder and in all sub folders. (NEW!)
 - Counts the lines of files in root folder and in all sub folders. 
 - Counts the words of files in root folder and in all sub folders. 
 - Counts the characters of files in root folder and in all sub folders.
@@ -30,6 +31,7 @@ Step 3 <br>
 Job done. <br><br>
 
 ##Usage
+- Counts the lines: http://YOUR_URL/count-code/files-of-code (NEW!)
 - Counts the lines: http://YOUR_URL/count-code/lines-of-code
 - Counts the words: http://YOUR_URL/count-code/words-of-code
 - Counts the characters: http://YOUR_URL/count-code/chars-of-code
