@@ -1,7 +1,7 @@
 <?php
  
 	//
-	//  Counts the characters of files in root folder and in all sub folders. 
+	//  Counts the files in root folder and in all sub folders. 
 	//  Original file by Hamid Alipour, http://blog.code-head.com/
 	//  Extended version for Panic's Status Board by Krisztian Tabori @ktabori, http://ktabori.me/
 	//  You may not sell this script or remove these header comments
@@ -25,13 +25,14 @@
 			$this -> folders 	= array();
 			$this -> files		= array();
 			$this -> exclude_extensions = array( 'gif', 'jpg', 'jpeg', 'png', 'tft', 'bmp' );
-			$this -> exclude_files 	    = array( 'class_chars_of_code.php', 'class_lines_of_code.php', 'class_words_of_code.php', 'class_files_of_code.php', '/chars-of-code/index.php', '/lines-of-code/index.php', '/words-of-code/index.php', '/files-of-code/index.php' );			
+			$this -> exclude_files 	    = array( 'class_chars_of_code.php', 'class_lines_of_code.php', 'class_words_of_code.php', 'class_files_of_code.php', '/chars-of-code/index.php', '/lines-of-code/index.php', '/words-of-code/index.php', '/files-of-code/index.php' );
 			$this -> exclude_folders 	 = array( '_private', '_vti_bin', '_vti_cnf', '_vti_log', '_vti_pvt', '_vti_txt' );
 		}
  
-		function count_chars() {
+		function count_files() {
 			$total_lines = 0;
 			$this -> get_contents();
+			$total_lines = 0;
 			foreach($this -> files as $file) {
 				if( in_array($file -> ext, $this -> exclude_extensions) || in_array($file -> name, $this -> exclude_files) ) {
 					continue;
@@ -42,7 +43,7 @@
 				if( in_array($folder -> name, $this -> exclude_folders) ) {
 					continue;
 				}
-				$total_lines += $folder -> count_chars();
+				$total_lines += $folder -> count_files();
 			}
 			return $total_lines;
 		}
@@ -93,16 +94,14 @@
 		}
  
 		function get_num_lines() {
-			$count_lines = file_get_contents($this -> path);
-			$count_lines = strlen($count_lines);
-			return $count_lines;
+			return 1;
 		}
  
 	} // Class
  
 	$path_to_here = dirname(dirname(dirname(__FILE__))) .DIRECTORY_SEPARATOR;
 	$folder 	  = new Folder($path_to_here);
-    $result = $folder -> count_chars();
+    $result = $folder -> count_files();
     header("Content-Type: text/plain");
     echo json_encode($result);
 ?>

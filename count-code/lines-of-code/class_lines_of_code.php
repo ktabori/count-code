@@ -5,7 +5,7 @@
 	//  Original file by Hamid Alipour, http://blog.code-head.com/
 	//  Extended version for Panic's Status Board by Krisztian Tabori @ktabori, http://ktabori.me/
 	//  You may not sell this script or remove these header comments
-	//  Count Code 1.0 for Panic's Status Board
+	//  Count Code 1.1 for Panic's Status Board
 	//
  
 	class Folder {
@@ -25,7 +25,7 @@
 			$this -> folders 	= array();
 			$this -> files		= array();
 			$this -> exclude_extensions = array( 'gif', 'jpg', 'jpeg', 'png', 'tft', 'bmp' );
-			$this -> exclude_files 	    = array( 'class_chars_of_code.php', 'class_lines_of_code.php', 'class_words_of_code.php', '/chars-of-code/index.php', '/lines-of-code/index.php', '/words-of-code/index.php' );
+			$this -> exclude_files 	    = array( 'class_chars_of_code.php', 'class_lines_of_code.php', 'class_words_of_code.php', 'class_files_of_code.php', '/chars-of-code/index.php', '/lines-of-code/index.php', '/words-of-code/index.php', '/files-of-code/index.php' );
 			$this -> exclude_folders 	 = array( '_private', '_vti_bin', '_vti_cnf', '_vti_log', '_vti_pvt', '_vti_txt' );
 		}
  
