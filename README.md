@@ -1,4 +1,4 @@
-Count Code for Panic's Status Board 1.1 (UPDATED)
+Count Code for Panic's Status Board 1.1
 ===================================
 
 ##About this script
