@@ -50,3 +50,7 @@ Job done. <br><br>
 - ktabori@me.com
 
 Sorry for my poor english.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ktabori/ccpsb/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
